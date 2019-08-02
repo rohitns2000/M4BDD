@@ -1,0 +1,42 @@
+System Equipment tracking System
+
+#Module under test - manage Equipments
+-------------------------------------------------------------
+FEATURE:  recording updates
+
+DESCRIPTION: To record updates to equipment records
+
+SCENARIO: Authorized users and systems must have the ability
+to record updates to equipment
+
+GIVEN The users and the systems are logged in
+AND Users and systems are authorized
+WHEN System enforces requirements 
+of the equipment Type properties. 
+AND equipment Type properties are updated.
+AND Transaction update is completed
+THEN Valid Locations are assigned to the 
+equipment record 
+AND Valid users are assigned to an equipment record
+BUT End Date has not expired
+--------------------------------------------------------------
+FEATURE: Updation of equipment records
+
+DESCRIPTION: To update records of the equipment
+
+SCENARIO: The system must provide the ability to restrict 
+which users may update equipment records.
+
+GIVEN <Users> are logged in
+AND <Users> are authorized
+WHEN updating equipment records
+THEN equipment records are updated
+
+EXAMPLES:
+|Users|
+|Inventory personnel|
+|Equipment Auditors|
+|Service Personnel|
+|Maintenance Personal|
+|Equipment Tracking Personnel|
+---------------------------------------------------------------
